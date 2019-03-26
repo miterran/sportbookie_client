@@ -5,9 +5,11 @@ import { FlatList, SafeAreaView } from 'react-native';
 import { gql } from 'apollo-boost';
 import { compose, graphql } from 'react-apollo';
 import Loading from '../../components/Loading';
+import NoData from '../../components/NoData';
 class UserHistoryWeekSelect extends PureComponent {
 	render() {
 		if (this.props.data.loading) return <Loading />;
+		if (this.props.data.historysBets.length === 0) return <NoData />;
 		const { data: { loading, refetch, historysBets } } = this.props;
 		return (
 			<Container>

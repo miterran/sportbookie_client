@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Container from '../../components/Container';
 import { FlatList, SafeAreaView } from 'react-native';
 import CardGame from '../../components/CardGame';
-import NoGame from '../../components/NoGame';
+import NoData from '../../components/NoData';
 import BottomButton from '../../components/BottomButton';
 import colors from '../../ui_style';
 import { gql } from 'apollo-boost';
@@ -24,7 +24,7 @@ class UserActionGame extends Component {
 	}
 	render() {
 		if (this.props.data.loading) return <Loading />;
-		if (this.props.data.games.length === 0) return <NoGame />;
+		if (this.props.data.games.length === 0) return <NoData />;
 		const { games, loading } = this.props.data;
 		return (
 			<Container>

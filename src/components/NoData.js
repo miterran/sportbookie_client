@@ -3,11 +3,11 @@ import Container from './Container';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import colors from '../ui_style';
 
-const NoGame = () => (
+const NoData = () => (
 	<Container>
 		<SafeAreaView style={{ flex: 1 }} />
 		<SafeAreaView style={{ flex: 1, alignItems: 'center' }}>
-			<Text style={styles.title}>NO GAME AVAILABLE</Text>
+			<Text style={styles.title}>NO DATA AVAILABLE</Text>
 			<Text style={[ styles.title, { fontSize: 13 } ]}>PLEASE CHECK BACK LATER</Text>
 		</SafeAreaView>
 		<SafeAreaView style={{ flex: 1 }} />
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default NoGame;
+export default NoData;
