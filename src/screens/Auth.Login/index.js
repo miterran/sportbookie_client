@@ -5,7 +5,7 @@ import colors from '../../ui_style';
 import AuthButton from '../../components/AuthButton';
 import AuthTextInput from '../../components/AuthTextInput';
 import AuthAlertText from '../../components/AuthAlertText';
-import wallpaper from '../../../assets/images/background/wallpaper_4.jpg';
+import wallpaper from '../../../assets/images/background/wallpaper_2.jpg';
 import axios from 'axios';
 
 class AuthLogin extends Component {
