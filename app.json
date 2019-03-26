@@ -1,24 +1,31 @@
 {
-	"expo": {
-		"name": "Sport Bookie",
-		"slug": "sport_bookie",
-		"privacy": "public",
-		"sdkVersion": "32.0.0",
-		"platforms": [ "ios", "android" ],
-		"version": "1.0",
-		"orientation": "portrait",
-		"icon": "./assets/images/icon.png",
-		"splash": {
-			"image": "./assets/images/background/wallpaper_1.png",
-			"resizeMode": "cover",
-			"backgroundColor": "#000000"
-		},
-		"updates": {
-			"fallbackToCacheTimeout": 0
-		},
-		"assetBundlePatterns": [ "**/*" ],
-		"ios": {
-			"supportsTablet": true
-		}
-	}
+  "expo": {
+    "name": "Sport Bookie",
+    "slug": "sport_bookie",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/background/wallpaper_1.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "description": "",
+    "githubUrl": "https://github.com/miterran/sportbookie_client"
+  }
 }

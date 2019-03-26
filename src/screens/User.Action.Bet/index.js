@@ -108,7 +108,7 @@ class UserActionBet extends Component {
 						selected={params}
 						line={game.line}
 					/>
-					<CardBetDetail game={game} selected={params} />
+					<CardBetDetail game={game} selected={params} status={0} />
 				</ScrollView>
 				<BottomButton
 					disabled={loading}

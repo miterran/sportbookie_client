@@ -9,6 +9,10 @@ export const query = gql`
 			sport
 			league
 			matchTime
+			score {
+				home
+				away
+			}
 			team {
 				home {
 					name
