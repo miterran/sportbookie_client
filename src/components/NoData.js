@@ -8,7 +8,7 @@ const NoData = () => (
 		<SafeAreaView style={{ flex: 1 }} />
 		<SafeAreaView style={{ flex: 1, alignItems: 'center' }}>
 			<Text style={styles.title}>NO DATA AVAILABLE</Text>
-			<Text style={[ styles.title, { fontSize: 13 } ]}>PLEASE CHECK BACK LATER</Text>
+			<Text style={[ styles.title, { fontSize: 12.5 } ]}>PLEASE CHECK BACK LATER</Text>
 		</SafeAreaView>
 		<SafeAreaView style={{ flex: 1 }} />
 	</Container>

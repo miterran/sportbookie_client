@@ -9,7 +9,7 @@ import NoData from '../../components/NoData';
 class UserHistoryWeekSelect extends PureComponent {
 	render() {
 		if (this.props.data.loading) return <Loading />;
-		if (this.props.data.historysBets.length === 0) return <NoData />;
+		if (this.props.data.historysBets.every((history) => history.betsWithGame.length === 0)) return <NoData />;
 		const { data: { loading, refetch, historysBets } } = this.props;
 		return (
 			<Container>
