@@ -10,7 +10,7 @@ import { compose, graphql } from 'react-apollo';
 import { withFormik } from 'formik';
 import status from './status';
 
-class UserActionBet extends Component {
+class UserBetWager extends Component {
 	state = status[0];
 	_onChangeAtRisk(atRisk) {
 		if (Number(atRisk) < 0 || isNaN(Number(atRisk)) || atRisk % 1 != 0 || this.state.done) return;
@@ -82,7 +82,7 @@ class UserActionBet extends Component {
 	_handleBottomButton() {
 		if (this.state.done) {
 			this.props.navigation.popToTop();
-			this.props.navigation.navigate('UserState');
+			this.props.navigation.navigate('UserHome');
 			return;
 		}
 		this._handleOrderSubmit();
@@ -132,6 +132,6 @@ const StateWithData = compose(
 	withFormik({
 		mapPropsToValues: () => ({ atRisk: '', toWin: '' })
 	})
-)(UserActionBet);
+)(UserBetWager);
 
 export default StateWithData;

@@ -5,7 +5,7 @@ import Hr from '../components/Hr';
 import colors from '../ui_style';
 import moment from 'moment-timezone';
 import periodConvert from '../util/period';
-import { displayOdd } from '../util';
+import displayOdd from '../util/displayOdd';
 import logos from '../util/logos';
 
 const defaultSelected = {
@@ -187,7 +187,7 @@ const Total = ({ line, ID, selectHandle, selected }) => {
 		<Row
 			left={
 				<BetButton
-					text={`>${line.points} (${displayOdd(line.overOdd)})`}
+					text={`O${line.points} (${displayOdd(line.overOdd)})`}
 					selectHandle={selectHandle}
 					selected={selected}
 					select={{
@@ -207,7 +207,7 @@ const Total = ({ line, ID, selectHandle, selected }) => {
 			}
 			right={
 				<BetButton
-					text={`<${line.points} (${displayOdd(line.underOdd)})`}
+					text={`U${line.points} (${displayOdd(line.underOdd)})`}
 					selectHandle={selectHandle}
 					selected={selected}
 					select={{

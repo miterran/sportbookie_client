@@ -1,4 +1,4 @@
-export const displayOdd = (n = 0, line) => {
+export default (displayOdd = (n = 0, line) => {
 	if (line === 'money' || line === 'draw') {
 		return '';
 	}
@@ -9,4 +9,4 @@ export const displayOdd = (n = 0, line) => {
 		return `+${n.toString()}`;
 	}
 	return `${n.toString()}`;
-};
+});

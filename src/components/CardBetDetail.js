@@ -5,7 +5,7 @@ import colors from '../ui_style';
 import Hr from './Hr';
 import moment from 'moment-timezone';
 import periodConvert from '../util/period';
-import { displayOdd } from '../util';
+import displayOdd from '../util/displayOdd';
 import logos from '../util/logos';
 
 const sportRename = {

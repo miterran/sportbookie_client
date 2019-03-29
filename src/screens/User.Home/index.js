@@ -11,7 +11,7 @@ import colors from '../../ui_style';
 import { gql } from 'apollo-boost';
 import { compose, graphql } from 'react-apollo';
 
-class State extends PureComponent {
+class Home extends PureComponent {
 	render() {
 		if (this.props.data.loading) return <Loading />;
 		const {
@@ -109,5 +109,5 @@ const query = gql`
 		}
 	}
 `;
-const StateWithData = compose(graphql(query, { options: { fetchPolicy: 'network-only' } }))(State);
+const StateWithData = compose(graphql(query, { options: { fetchPolicy: 'network-only' } }))(Home);
 export default StateWithData;

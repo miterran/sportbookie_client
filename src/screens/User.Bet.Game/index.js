@@ -16,7 +16,7 @@ const initialState = {
 	target: ''
 };
 
-class UserActionGame extends Component {
+class UserBetGame extends Component {
 	state = initialState;
 	_refetch() {
 		this.setState(initialState);
@@ -49,7 +49,7 @@ class UserActionGame extends Component {
 					disabled={!this.state.ID}
 					backgroundColor={this.state.ID ? colors.success : colors.dark}
 					text={this.state.ID ? 'NEXT' : 'SELECT ODD'}
-					onPress={() => this.props.navigation.navigate('UserActionBet', this.state)}
+					onPress={() => this.props.navigation.navigate('UserBetWager', this.state)}
 				/>
 			</Container>
 		);
@@ -108,6 +108,6 @@ const StateWithData = compose(
 			fetchPolicy: 'network-only'
 		})
 	})
-)(UserActionGame);
+)(UserBetGame);
 
 export default StateWithData;

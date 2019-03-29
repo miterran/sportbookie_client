@@ -1,20 +1,20 @@
 import { createDrawerNavigator, createAppContainer } from 'react-navigation';
-import UserState from '../navigators/user.state';
-import UserAction from '../navigators/user.action';
+import UserHome from '../navigators/user.home';
+import UserBet from '../navigators/user.bet';
 import UserHistoryScreen from '../navigators/user.history';
 import CustomDrawerContent from '../components/CustomDrawerContent';
 import colors from '../ui_style';
 
 const UserDrawerNav = createDrawerNavigator(
 	{
-		UserState: {
-			screen: UserState,
+		UserHome: {
+			screen: UserHome,
 			navigationOptions: {
 				drawerLabel: 'HOME'
 			}
 		},
-		UserAction: {
-			screen: UserAction,
+		UserBet: {
+			screen: UserBet,
 			navigationOptions: {
 				drawerLabel: 'BET'
 			}
@@ -27,7 +27,7 @@ const UserDrawerNav = createDrawerNavigator(
 		}
 	},
 	{
-		initialRouteName: 'UserState',
+		initialRouteName: 'UserHome',
 		drawerType: 'back',
 		drawerWidth: 192,
 		gesturesEnabled: false,

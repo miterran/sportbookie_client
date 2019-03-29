@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, SafeAreaView, TextInput, Text } from 'react-native';
 import Card from './Card';
 import colors from '../ui_style';
-import { displayOdd } from '../util';
+import displayOdd from '../util/displayOdd';
 
 const lineRename = {
 	money: 'M-LINE',

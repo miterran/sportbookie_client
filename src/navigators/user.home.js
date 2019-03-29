@@ -1,12 +1,12 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import UserStateScreen from '../screens/User.State';
+import UserHomeScreen from '../screens/User.Home';
 import colors from '../ui_style';
 
-const UserState = createStackNavigator({
-	UserState: {
-		screen: UserStateScreen,
+const UserHome = createStackNavigator({
+	UserHome: {
+		screen: UserHomeScreen,
 		navigationOptions: {
-			title: 'STATE',
+			title: 'HOME',
 			headerStyle: {
 				backgroundColor: colors.dark,
 				borderBottomWidth: 0
@@ -16,4 +16,4 @@ const UserState = createStackNavigator({
 	}
 });
 
-export default createAppContainer(UserState);
+export default createAppContainer(UserHome);

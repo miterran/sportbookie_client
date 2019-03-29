@@ -25,6 +25,9 @@
     "ios": {
       "supportsTablet": true
     },
+    "extra": {
+      "serverUri": "https://sportbookie.herokuapp.com"
+    },
     "description": "",
     "githubUrl": "https://github.com/miterran/sportbookie_client"
   }

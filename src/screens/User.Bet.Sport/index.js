@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import Container from '../../components/Container';
 import { FlatList, SafeAreaView } from 'react-native';
-import ActionSportPick from '../../components/ActionSportPick';
+import BetSportPick from '../../components/BetSportPick';
 import basketball_img from '../../../assets/images/sport/basketball.jpg';
 import football_img from '../../../assets/images/sport/football.jpg';
 import baseball_img from '../../../assets/images/sport/baseball.jpg';
@@ -20,7 +20,7 @@ const sports = [
 	{ name: 'esport', title: 'E-SPROT', img: esport_img }
 ];
 
-class UserActionSport extends PureComponent {
+class UserBetSport extends PureComponent {
 	render() {
 		return (
 			<Container>
@@ -31,9 +31,9 @@ class UserActionSport extends PureComponent {
 					ListFooterComponent={<SafeAreaView style={{ height: 24 }} />}
 					renderItem={({ item: sport }) => {
 						return (
-							<ActionSportPick
+							<BetSportPick
 								onPress={() =>
-									this.props.navigation.navigate('UserActionGame', {
+									this.props.navigation.navigate('UserBetGame', {
 										name: sport.name,
 										title: sport.title
 									})}
@@ -47,4 +47,4 @@ class UserActionSport extends PureComponent {
 		);
 	}
 }
-export default UserActionSport;
+export default UserBetSport;

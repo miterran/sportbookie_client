@@ -1,25 +1,25 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import UserActionSportScreen from '../screens/User.Action.Sport';
-import UserActionGameScreen from '../screens/User.Action.Game';
-import UserActionBetScreen from '../screens/User.Action.Bet';
+import UserBetSportScreen from '../screens/User.Bet.Sport';
+import UserBetGameScreen from '../screens/User.Bet.Game';
+import UserBetWagerScreen from '../screens/User.Bet.Wager';
 import colors from '../ui_style';
 
-const UserAction = createStackNavigator(
+const UserBet = createStackNavigator(
 	{
-		UserActionSport: {
-			screen: UserActionSportScreen,
+		UserBetSport: {
+			screen: UserBetSportScreen,
 			navigationOptions: {
 				title: 'SPORT'
 			}
 		},
-		UserActionGame: {
-			screen: UserActionGameScreen,
+		UserBetGame: {
+			screen: UserBetGameScreen,
 			navigationOptions: ({ navigation: { state: { params } } }) => ({
 				title: params.title.toUpperCase()
 			})
 		},
-		UserActionBet: {
-			screen: UserActionBetScreen,
+		UserBetWager: {
+			screen: UserBetWagerScreen,
 			navigationOptions: {
 				title: 'WAGER'
 			}
@@ -36,4 +36,4 @@ const UserAction = createStackNavigator(
 	}
 );
 
-export default createAppContainer(UserAction);
+export default createAppContainer(UserBet);
