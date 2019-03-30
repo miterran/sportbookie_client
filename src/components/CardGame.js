@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Text, TouchableOpacity, SafeAreaView } from 'react-native';
 import Card from '../components/Card';
 import Hr from '../components/Hr';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 import moment from 'moment-timezone';
 import periodConvert from '../util/period';
 import displayOdd from '../util/displayOdd';

@@ -7,7 +7,7 @@ import HeaderTitle from '../../components/HeaderTitle';
 import CardBetDetail from '../../components/CardBetDetail';
 import Loading from '../../components/Loading';
 import Hr from '../../components/Hr';
-import colors from '../../ui_style';
+import colors from '../../ui_style/colors';
 import { gql } from 'apollo-boost';
 import { compose, graphql } from 'react-apollo';
 

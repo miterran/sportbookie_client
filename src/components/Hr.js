@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView } from 'react-native';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 
 const Hr = ({ backgroundColor = colors.black, height = 1 }) => (
 	<SafeAreaView style={[ styles.hr, { backgroundColor: backgroundColor }, { height: height } ]} />

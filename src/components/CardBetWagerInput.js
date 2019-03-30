@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, TextInput, Text } from 'react-native';
 import Card from './Card';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 import displayOdd from '../util/displayOdd';
 
 const lineRename = {

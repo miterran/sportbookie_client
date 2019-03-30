@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 
 const BottomButton = ({ onPress, text, backgroundColor = colors.dark, color = colors.white, disabled = false }) => (
 	<TouchableOpacity

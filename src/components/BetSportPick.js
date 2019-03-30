@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, ImageBackground, SafeAreaView } from 'react-native';
-import colors from '../ui_style';
+import { StyleSheet, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import colors from '../ui_style/colors';
 
 const ActionSportPick = ({ source, title, onPress }) => (
 	<TouchableOpacity onPress={onPress}>

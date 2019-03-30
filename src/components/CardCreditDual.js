@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import Card from './Card';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 
 const CardCreditDual = ({ titleLeft, amountLeft, colorLeft, titleRight, amountRight, colorRight }) => (
 	<Card>

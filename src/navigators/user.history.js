@@ -1,8 +1,7 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import UserHistoryWeekSelectScreen from '../screens/User.History.WeekSelect';
 import UserHistoryWeeklySummaryScreen from '../screens/User.History.WeeklySummary';
-import colors from '../ui_style';
-
+import CustomStackNavigationOptions from '../ui_style/CustomStackNavigationOptions';
 const UserHistory = createStackNavigator(
 	{
 		UserHistoryWeekSelect: {
@@ -19,13 +18,7 @@ const UserHistory = createStackNavigator(
 		}
 	},
 	{
-		defaultNavigationOptions: {
-			headerStyle: {
-				backgroundColor: colors.dark,
-				borderBottomWidth: 0
-			},
-			headerTintColor: colors.white
-		}
+		defaultNavigationOptions: ({ navigation }) => CustomStackNavigationOptions({ navigation: navigation })
 	}
 );
 

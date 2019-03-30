@@ -1,10 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
-import colors from '../ui_style'
+import colors from '../ui_style/colors';
 
-const HeaderTitle = ({ title }) => (
-	<Text style={styles.title}>{title}</Text>
-)
+const HeaderTitle = ({ title }) => <Text style={styles.title}>{title}</Text>;
 
 const styles = StyleSheet.create({
 	title: {
@@ -19,4 +17,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default HeaderTitle
+export default HeaderTitle;

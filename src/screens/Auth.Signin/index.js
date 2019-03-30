@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, ImageBackground, SafeAreaView, AsyncStorage } from 'react-native';
 import AuthButton from '../../components/AuthButton';
 import wallpaper from '../../../assets/images/background/wallpaper_5.jpg';
-import colors from '../../ui_style';
+import colors from '../../ui_style/colors';
 
 class AuthSignin extends Component {
 	async componentWillMount() {

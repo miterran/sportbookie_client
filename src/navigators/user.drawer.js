@@ -3,7 +3,7 @@ import UserHome from '../navigators/user.home';
 import UserBet from '../navigators/user.bet';
 import UserHistoryScreen from '../navigators/user.history';
 import CustomDrawerContent from '../components/CustomDrawerContent';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 
 const UserDrawerNav = createDrawerNavigator(
 	{
@@ -28,6 +28,7 @@ const UserDrawerNav = createDrawerNavigator(
 	},
 	{
 		initialRouteName: 'UserHome',
+		drawerOpenRoute: 'DrawerOpen',
 		drawerType: 'back',
 		drawerWidth: 192,
 		gesturesEnabled: false,
@@ -43,5 +44,4 @@ const UserDrawerNav = createDrawerNavigator(
 		contentComponent: CustomDrawerContent
 	}
 );
-
 export default createAppContainer(UserDrawerNav);

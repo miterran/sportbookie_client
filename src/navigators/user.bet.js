@@ -2,7 +2,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import UserBetSportScreen from '../screens/User.Bet.Sport';
 import UserBetGameScreen from '../screens/User.Bet.Game';
 import UserBetWagerScreen from '../screens/User.Bet.Wager';
-import colors from '../ui_style';
+import CustomStackNavigationOptions from '../ui_style/CustomStackNavigationOptions';
 
 const UserBet = createStackNavigator(
 	{
@@ -26,13 +26,7 @@ const UserBet = createStackNavigator(
 		}
 	},
 	{
-		defaultNavigationOptions: {
-			headerStyle: {
-				backgroundColor: colors.dark,
-				borderBottomWidth: 0
-			},
-			headerTintColor: colors.white
-		}
+		defaultNavigationOptions: ({ navigation }) => CustomStackNavigationOptions({ navigation: navigation })
 	}
 );
 

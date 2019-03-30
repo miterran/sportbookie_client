@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, TextInput } from 'react-native';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 
 const AuthTextInput = ({ editable = true, title, secureTextEntry, onChangeText, value }) => {
 	return (

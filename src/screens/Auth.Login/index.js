@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground, SafeAreaView, AsyncStorage } from 'react-native';
 import { withFormik } from 'formik';
-import colors from '../../ui_style';
+import colors from '../../ui_style/colors';
 import AuthButton from '../../components/AuthButton';
 import AuthTextInput from '../../components/AuthTextInput';
 import AuthAlertText from '../../components/AuthAlertText';

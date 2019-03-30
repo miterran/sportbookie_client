@@ -4,7 +4,7 @@ import { FlatList, SafeAreaView } from 'react-native';
 import CardGame from '../../components/CardGame';
 import NoData from '../../components/NoData';
 import BottomButton from '../../components/BottomButton';
-import colors from '../../ui_style';
+import colors from '../../ui_style/colors';
 import { gql } from 'apollo-boost';
 import { compose, graphql } from 'react-apollo';
 import Loading from '../../components/Loading';

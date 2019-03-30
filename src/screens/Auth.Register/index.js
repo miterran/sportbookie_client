@@ -5,7 +5,7 @@ import AuthButton from '../../components/AuthButton';
 import AuthTextInput from '../../components/AuthTextInput';
 import AuthAlertText from '../../components/AuthAlertText';
 import wallpaper from '../../../assets/images/background/wallpaper_3.jpg';
-import colors from '../../ui_style';
+import colors from '../../ui_style/colors';
 import axios from 'axios';
 import yup from 'yup';
 

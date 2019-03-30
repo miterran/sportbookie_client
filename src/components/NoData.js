@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from './Container';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 
 const NoData = () => (
 	<Container>

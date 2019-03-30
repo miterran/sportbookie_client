@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text, SafeAreaView } from 'react-native';
 import Card from './Card';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 import moment from 'moment-timezone';
 
 const CardHistoryWeekSelect = ({ onPress, fromDate, toDate, bets, balance, disabled }) => {

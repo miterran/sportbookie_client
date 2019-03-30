@@ -1,4 +1,4 @@
-import colors from '../../ui_style';
+import colors from '../../ui_style/colors';
 const status = {
 	0: {
 		text: 'SUBMIT ORDER',

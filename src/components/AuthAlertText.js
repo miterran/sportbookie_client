@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, Text } from 'react-native';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 
 const msg = {
 	0: '',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, ActivityIndicator } from 'react-native';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 import Container from '../components/Container';
 
 const Loading = () => (

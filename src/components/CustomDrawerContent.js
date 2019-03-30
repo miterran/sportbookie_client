@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Constants } from 'expo';
 import { DrawerItems, SafeAreaView } from 'react-navigation';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, AsyncStorage } from 'react-native';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 
 class CustomDrawerContent extends Component {
 	state = {

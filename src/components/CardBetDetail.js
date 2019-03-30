@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, Image, Text } from 'react-native';
 import Card from './Card';
-import colors from '../ui_style';
+import colors from '../ui_style/colors';
 import Hr from './Hr';
 import moment from 'moment-timezone';
 import periodConvert from '../util/period';
