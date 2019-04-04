@@ -35,15 +35,9 @@ class UserBetGame extends Component {
 					keyExtractor={(game) => game.ID}
 					ListFooterComponent={<SafeAreaView style={{ height: 24 }} />}
 					extraData={this.state}
-					renderItem={({ item: game }) => {
-						return (
-							<CardGame
-								game={game}
-								selectHandle={(select) => this.setState(select)}
-								selected={this.state}
-							/>
-						);
-					}}
+					renderItem={({ item: game }) => (
+						<CardGame game={game} selectHandle={(select) => this.setState(select)} selected={this.state} />
+					)}
 				/>
 				<BottomButton
 					disabled={!this.state.ID}
@@ -65,6 +59,7 @@ const query = gql`
 			sport
 			league
 			matchTime
+			period
 			team {
 				home {
 					rot
@@ -75,8 +70,6 @@ const query = gql`
 					name
 				}
 			}
-			period
-			cutOffTime
 			line {
 				money {
 					homeOdd

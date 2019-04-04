@@ -28,7 +28,7 @@
     "extra": {
       "serverUri": "https://sportbookie.herokuapp.com"
     },
-    "description": "",
+    "description": "frontend: https://github.com/miterran/sportbookie_client\nbackend: https://github.com/miterran/sportbookie_server",
     "githubUrl": "https://github.com/miterran/sportbookie_client"
   }
 }

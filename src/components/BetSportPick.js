@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import colors from '../ui_style/colors';
 
-const ActionSportPick = ({ source, title, onPress }) => (
+const BetSportPick = ({ source, title, onPress }) => (
 	<TouchableOpacity onPress={onPress}>
 		<ImageBackground source={source} style={styles.background}>
 			<Text style={styles.text}>{title}</Text>
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default ActionSportPick;
+export default BetSportPick;

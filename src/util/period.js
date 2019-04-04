@@ -1,9 +1,9 @@
 export default {
-	0: 'Full Game',
-	1: '1st Half',
-	2: '2nd Half',
-	3: '1st Quarter',
-	4: '2nd Quarter',
-	5: '3rd Quarter',
-	6: '4th Quarter'
+	0: 'FULL GAME',
+	1: '1st HALF',
+	2: '2nd HALF',
+	3: '1st QUARTER',
+	4: '2nd QUARTER',
+	5: '3rd QUARTER',
+	6: '4th QUARTER'
 };
