@@ -29,6 +29,7 @@ const UserDrawerNav = createDrawerNavigator(
 	{
 		initialRouteName: 'UserHome',
 		drawerOpenRoute: 'DrawerOpen',
+		unmountInactiveRoutes: true,
 		drawerType: 'back',
 		drawerWidth: 192,
 		gesturesEnabled: false,
