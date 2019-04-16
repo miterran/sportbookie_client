@@ -9,7 +9,9 @@ import NoData from '../../components/NoData';
 class UserHistoryWeekSelect extends PureComponent {
 	render() {
 		if (this.props.data.loading) return <Loading />;
-		if (this.props.data.historysBets.every((history) => history.betsWithGame.length === 0)) return <NoData />;
+		if (this.props.data.historysBets.every((history) => history.betsWithGame.length === 0)) {
+			return <NoData onPress={() => this.props.data.refetch} />;
+		}
 		const { data: { loading, refetch, historysBets } } = this.props;
 		return (
 			<Container>
@@ -18,6 +20,8 @@ class UserHistoryWeekSelect extends PureComponent {
 					onRefresh={refetch}
 					refreshing={loading}
 					keyExtractor={(history, i) => 'h' + i}
+					ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
+					ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
 					renderItem={({ item: history }) => (
 						<CardHistoryWeekSelect
 							onPress={() => this.props.navigation.navigate('UserHistoryWeeklyDetail', history)}

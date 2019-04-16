@@ -24,7 +24,9 @@ class UserBetGame extends Component {
 	}
 	render() {
 		if (this.props.data.loading) return <Loading />;
-		if (this.props.data.games.length === 0) return <NoData />;
+		if (this.props.data.games.length === 0) {
+			return <NoData onPress={() => this.props.data.refetch} />;
+		}
 		const { games, loading } = this.props.data;
 		return (
 			<Container>

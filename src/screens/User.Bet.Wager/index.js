@@ -81,7 +81,8 @@ class UserBetWager extends Component {
 	}
 	_handleBottomButton() {
 		if (this.state.done) {
-			this.props.navigation.dismiss();
+			this.props.navigation.popToTop();
+			this.props.navigation.navigate('UserHome');
 			return;
 		}
 		this._handleOrderSubmit();

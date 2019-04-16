@@ -1,14 +1,16 @@
 import React from 'react';
 import Container from './Container';
-import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import colors from '../ui_style/colors';
 
-const NoData = () => (
+const NoData = ({ onPress }) => (
 	<Container>
 		<SafeAreaView style={{ flex: 1 }} />
 		<SafeAreaView style={{ flex: 1, alignItems: 'center' }}>
-			<Text style={styles.title}>NO DATA AVAILABLE</Text>
-			<Text style={[ styles.title, { fontSize: 12.5 } ]}>PLEASE CHECK BACK LATER</Text>
+			<TouchableOpacity onPress={onPress}>
+				<Text style={styles.title}>NO DATA AVAILABLE</Text>
+				<Text style={[ styles.title, { fontSize: 12.5 } ]}>PLEASE CHECK BACK LATER</Text>
+			</TouchableOpacity>
 		</SafeAreaView>
 		<SafeAreaView style={{ flex: 1 }} />
 	</Container>

@@ -11,15 +11,15 @@ const CardHistoryWeekSelect = ({ onPress, fromDate, toDate, bets, balance, disab
 			<Card>
 				<SafeAreaView style={{ margin: 12 }}>
 					<SafeAreaView style={{ flexDirection: 'row' }}>
-						<Text style={[ styles.text, { flex: 2 } ]}>DATE</Text>
+						<Text style={[ styles.text, { flex: 2 } ]}>DATE RANGE</Text>
 						<Text style={[ styles.text, { flex: 1, textAlign: 'right' } ]}>BETS</Text>
 						<Text style={[ styles.text, { flex: 1, textAlign: 'right' } ]}>BALANCE</Text>
 					</SafeAreaView>
 					<SafeAreaView style={{ flexDirection: 'row' }}>
 						<Text style={[ styles.text, { flex: 2, color: colors.dust, fontSize: 14 } ]}>
-							{moment(fromDate).tz('America/Los_Angeles').format('MMM DD, YY')}
+							{moment(fromDate).tz('America/Los_Angeles').format('MMM DD, YY').toUpperCase()}
 							{' - '}
-							{moment(toDate).tz('America/Los_Angeles').format('MMM DD, YY')}
+							{moment(toDate).tz('America/Los_Angeles').format('MMM DD, YY').toUpperCase()}
 						</Text>
 						<Text
 							style={[

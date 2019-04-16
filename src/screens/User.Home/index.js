@@ -40,26 +40,25 @@ class Home extends PureComponent {
 						amountRight={balance}
 						colorRight={balance >= 0 ? colors.success : colors.danger}
 					/>
-
+					<SafeAreaView style={{ height: 12 }} />
 					<Hr />
-					<SafeAreaView style={{ marginTop: 12 }}>
-						<HeaderTitle title={`${betsWithGame.length} OPEN BETS`} />
-						<FlatList
-							data={betsWithGame}
-							keyExtractor={(bet) => bet.ID}
-							ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
-							ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
-							renderItem={({ item: bet }) => (
-								<CardBetDetail
-									status={bet.status}
-									game={bet.game}
-									selected={bet.selected}
-									isBetOrder={true}
-									wager={bet.wager}
-								/>
-							)}
-						/>
-					</SafeAreaView>
+					<SafeAreaView style={{ height: 12 }} />
+					<HeaderTitle title={`${betsWithGame.length} OPEN BETS`} />
+					<FlatList
+						data={betsWithGame}
+						keyExtractor={(bet) => bet.ID}
+						ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
+						ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
+						renderItem={({ item: bet }) => (
+							<CardBetDetail
+								status={bet.status}
+								game={bet.game}
+								selected={bet.selected}
+								isBetOrder={true}
+								wager={bet.wager}
+							/>
+						)}
+					/>
 				</ScrollView>
 			</Container>
 		);
