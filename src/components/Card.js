@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
 		borderRadius: 12,
 		marginLeft: 12,
 		marginRight: 12,
-		marginBottom: 12,
+		// marginBottom: 12,
 		backgroundColor: colors.black
 	}
 });

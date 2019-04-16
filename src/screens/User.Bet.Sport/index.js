@@ -28,7 +28,8 @@ class UserBetSport extends PureComponent {
 					data={sports}
 					keyExtractor={(sport) => sport.name}
 					extraData={() => null}
-					ListFooterComponent={<SafeAreaView style={{ height: 24 }} />}
+					ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
+					ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
 					renderItem={({ item: sport }) => {
 						return (
 							<BetSportPick

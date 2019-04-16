@@ -3,47 +3,56 @@ const status = {
 	0: {
 		text: 'SUBMIT ORDER',
 		backgroundColor: colors.primary,
-		done: false
+		done: false,
+		disabled: false
 	},
 	1: {
 		text: 'COMPLETED',
 		backgroundColor: colors.success,
-		done: true
+		done: true,
+		disabled: false
 	},
 	2: {
 		text: 'MINIMUM RISK REQUIRES 10',
 		backgroundColor: colors.warning,
-		done: false
+		done: false,
+		disabled: true
 	},
 	3: {
 		text: 'NOT ENOUGH CREDIT',
 		backgroundColor: colors.danger,
-		done: false
+		done: false,
+		disabled: true
 	},
 	4: {
 		text: 'ODD UPDATED',
 		backgroundColor: colors.warning,
-		done: false
+		done: false,
+		disabled: true
 	},
 	5: {
 		text: 'EVENT TIME OUT',
 		backgroundColor: colors.danger,
-		done: true
+		done: true,
+		disabled: false
 	},
 	6: {
 		text: 'GAME NOT FOUND',
 		backgroundColor: colors.danger,
-		done: true
-	},
-	7: {
-		text: 'GAME NOT FOUND',
-		backgroundColor: colors.danger,
-		done: true
+		done: true,
+		disabled: true
 	},
 	8: {
 		text: 'LOADING',
 		backgroundColor: colors.action,
-		done: false
+		done: false,
+		disabled: true
+	},
+	9: {
+		text: 'INPUT BET AMOUNT',
+		backgroundColor: colors.black,
+		done: false,
+		disabled: true
 	}
 };
 

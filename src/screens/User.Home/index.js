@@ -22,6 +22,7 @@ class Home extends PureComponent {
 				<ScrollView refreshControl={<RefreshControl refreshing={loading} onRefresh={refetch} />}>
 					<HeaderTitle title="WEEKLY CREDIT" />
 					<CardCredit title="INITIAL" amount={initial} color={colors.special} />
+					<SafeAreaView style={{ height: 12 }} />
 					<CardCreditDual
 						titleLeft="AT RISK"
 						amountLeft={atRisk}
@@ -30,6 +31,7 @@ class Home extends PureComponent {
 						amountRight={toWin}
 						colorRight={colors.primary}
 					/>
+					<SafeAreaView style={{ height: 12 }} />
 					<CardCreditDual
 						titleLeft="AVAILABLE"
 						amountLeft={available}
@@ -40,12 +42,13 @@ class Home extends PureComponent {
 					/>
 
 					<Hr />
-					<SafeAreaView style={{ marginTop: 12, marginBottom: 48 }}>
+					<SafeAreaView style={{ marginTop: 12 }}>
 						<HeaderTitle title={`${betsWithGame.length} OPEN BETS`} />
 						<FlatList
 							data={betsWithGame}
 							keyExtractor={(bet) => bet.ID}
-							ListFooterComponent={<SafeAreaView style={{ height: 24 }} />}
+							ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
+							ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
 							renderItem={({ item: bet }) => (
 								<CardBetDetail
 									status={bet.status}

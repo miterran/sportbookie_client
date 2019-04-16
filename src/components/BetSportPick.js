@@ -13,7 +13,6 @@ const BetSportPick = ({ source, title, onPress }) => (
 const styles = StyleSheet.create({
 	background: {
 		height: 120,
-		marginBottom: 12,
 		justifyContent: 'center'
 	},
 	text: {

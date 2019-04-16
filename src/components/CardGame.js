@@ -41,29 +41,33 @@ const Logo = ({ name, sport }) => (
 	</SafeAreaView>
 );
 
-const Row = ({ left, middle, right, minWidth = 'auto', isEvent = false }) => (
-	<SafeAreaView style={{ marginBottom: 6 }}>
-		<SafeAreaView style={{ flex: 1, flexDirection: 'row', marginBottom: isEvent ? 0 : 6 }}>
+const Row = ({ left, middle, right }) => (
+	<SafeAreaView>
+		<SafeAreaView style={{ flex: 1, flexDirection: 'row' }}>
 			<SafeAreaView style={{ flex: 5 }}>{left}</SafeAreaView>
-			<SafeAreaView style={{ flex: 2, minWidth: minWidth }}>{middle}</SafeAreaView>
+			<SafeAreaView style={{ flex: 2 }}>{middle}</SafeAreaView>
 			<SafeAreaView style={{ flex: 5 }}>{right}</SafeAreaView>
 		</SafeAreaView>
-		<Hr backgroundColor={colors.dark} height={isEvent ? 0 : 1} />
+		<Hr backgroundColor={colors.dark} height={1} />
 	</SafeAreaView>
 );
 
 const Team = ({ home, away }) => (
-	<Row left={<GameText text={home} />} middle={<GameText text="VS" />} right={<GameText text={away} />} />
-);
-
-const Event = ({ matchTime, period, homeName, awayName, sport }) => (
-	<Row
-		left={<Logo name={homeName} sport={sport} />}
-		middle={<Time matchTime={matchTime} period={period} />}
-		minWidth={36}
-		isEvent={true}
-		right={<Logo name={awayName} sport={sport} />}
-	/>
+	<SafeAreaView>
+		<SafeAreaView style={{ flex: 1, flexDirection: 'row' }}>
+			<SafeAreaView style={{ flex: 5 }}>
+				<GameText text={home} />
+			</SafeAreaView>
+			<SafeAreaView style={{ flex: 1 }}>
+				<GameText text="VS" />
+			</SafeAreaView>
+			<SafeAreaView style={{ flex: 5 }}>
+				<GameText text={away} />
+			</SafeAreaView>
+		</SafeAreaView>
+		<SafeAreaView style={{ height: 6 }} />
+		<Hr backgroundColor={colors.dark} height={1} />
+	</SafeAreaView>
 );
 
 const BetButton = ({ text, selectHandle, selected, select }) => (
@@ -74,9 +78,9 @@ const BetButton = ({ text, selectHandle, selected, select }) => (
 					? defaultSelected
 					: select
 			)}
-		style={{ flex: 1 }}
-		hitSlop={{ top: 6, bottom: 6 }}
+		style={{ flex: 1, height: 24 }}
 	>
+		<SafeAreaView style={{ height: 6 }} />
 		<GameText
 			text={text}
 			color={
@@ -113,10 +117,13 @@ const Money = ({ line, ID, selectHandle, selected }) => {
 				/>
 			}
 			middle={
-				<GameText
-					text="M-LINE"
-					color={selected.lineType === 'money' && selected.ID === ID ? colors.success : colors.white}
-				/>
+				<SafeAreaView>
+					<SafeAreaView style={{ height: 6 }} />
+					<GameText
+						text="M-LINE"
+						color={selected.lineType === 'money' && selected.ID === ID ? colors.success : colors.white}
+					/>
+				</SafeAreaView>
 			}
 			right={
 				<BetButton
@@ -157,10 +164,13 @@ const Spread = ({ line, ID, selectHandle, selected }) => {
 				/>
 			}
 			middle={
-				<GameText
-					text="SPREAD"
-					color={selected.lineType === 'spread' && selected.ID === ID ? colors.success : colors.white}
-				/>
+				<SafeAreaView>
+					<SafeAreaView style={{ height: 6 }} />
+					<GameText
+						text="SPREAD"
+						color={selected.lineType === 'spread' && selected.ID === ID ? colors.success : colors.white}
+					/>
+				</SafeAreaView>
 			}
 			right={
 				<BetButton
@@ -201,10 +211,13 @@ const Total = ({ line, ID, selectHandle, selected }) => {
 				/>
 			}
 			middle={
-				<GameText
-					text="TOTAL"
-					color={selected.lineType === 'total' && selected.ID === ID ? colors.success : colors.white}
-				/>
+				<SafeAreaView>
+					<SafeAreaView style={{ height: 6 }} />
+					<GameText
+						text="TOTAL"
+						color={selected.lineType === 'total' && selected.ID === ID ? colors.success : colors.white}
+					/>
+				</SafeAreaView>
 			}
 			right={
 				<BetButton
@@ -245,10 +258,13 @@ const Draw = ({ line, ID, selectHandle, selected }) => {
 				/>
 			}
 			middle={
-				<GameText
-					text="DRAW"
-					color={selected.lineType === 'draw' && selected.ID === ID ? colors.success : colors.white}
-				/>
+				<SafeAreaView>
+					<SafeAreaView style={{ height: 6 }} />
+					<GameText
+						text="DRAW"
+						color={selected.lineType === 'draw' && selected.ID === ID ? colors.success : colors.white}
+					/>
+				</SafeAreaView>
 			}
 			right={
 				<BetButton
@@ -268,6 +284,22 @@ const Draw = ({ line, ID, selectHandle, selected }) => {
 	);
 };
 
+const Event = ({ matchTime, period, homeName, awayName, sport }) => (
+	<SafeAreaView>
+		<SafeAreaView style={{ flex: 1, flexDirection: 'row' }}>
+			<SafeAreaView style={{ flex: 5 }}>
+				<Logo name={homeName} sport={sport} />
+			</SafeAreaView>
+			<SafeAreaView style={{ flex: 2, minWidth: 36 }}>
+				<Time matchTime={matchTime} period={period} />
+			</SafeAreaView>
+			<SafeAreaView style={{ flex: 5 }}>
+				<Logo name={awayName} sport={sport} />
+			</SafeAreaView>
+		</SafeAreaView>
+	</SafeAreaView>
+);
+
 const CardGame = ({
 	selectHandle,
 	selected,
@@ -278,6 +310,7 @@ const CardGame = ({
 			<GameText text={league.toUpperCase()} color={colors.mute} fontSize={14} />
 			<SafeAreaView style={{ height: 6 }} />
 			<Event matchTime={matchTime} period={period} homeName={home.name} awayName={away.name} sport={sport} />
+			<SafeAreaView style={{ height: 6 }} />
 			<Team home={home.name} away={away.name} />
 			<Money line={money} ID={ID} selectHandle={selectHandle} selected={selected} />
 			<Spread line={spread} ID={ID} selectHandle={selectHandle} selected={selected} />

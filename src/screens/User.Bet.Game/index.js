@@ -8,6 +8,7 @@ import colors from '../../ui_style/colors';
 import { gql } from 'apollo-boost';
 import { compose, graphql } from 'react-apollo';
 import Loading from '../../components/Loading';
+
 const initialState = {
 	ID: '',
 	lineType: '',
@@ -19,8 +20,7 @@ const initialState = {
 class UserBetGame extends Component {
 	state = initialState;
 	_refetch() {
-		this.setState(initialState);
-		this.props.data.refetch();
+		this.props.data.refetch().then(() => this.setState(initialState));
 	}
 	render() {
 		if (this.props.data.loading) return <Loading />;
@@ -33,7 +33,8 @@ class UserBetGame extends Component {
 					onRefresh={() => this._refetch()}
 					refreshing={loading}
 					keyExtractor={(game) => game.ID}
-					ListFooterComponent={<SafeAreaView style={{ height: 24 }} />}
+					ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
+					ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
 					extraData={this.state}
 					renderItem={({ item: game }) => (
 						<CardGame game={game} selectHandle={(select) => this.setState(select)} selected={this.state} />

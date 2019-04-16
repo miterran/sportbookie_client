@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Container from '../../components/Container';
-import { ScrollView, RefreshControl } from 'react-native';
+import { ScrollView, RefreshControl, SafeAreaView } from 'react-native';
 import BottomButton from '../../components/BottomButton';
 import Loading from '../../components/Loading';
 import CardBetWagerInput from '../../components/CardBetWagerInput';
@@ -11,7 +11,7 @@ import { withFormik } from 'formik';
 import status from './status';
 
 class UserBetWager extends Component {
-	state = status[0];
+	state = status[9];
 	_onChangeAtRisk(atRisk) {
 		if (Number(atRisk) < 0 || isNaN(Number(atRisk)) || atRisk % 1 != 0 || this.state.done) return;
 		const {
@@ -42,7 +42,7 @@ class UserBetWager extends Component {
 	}
 	_refetch() {
 		if (this.state.done) return;
-		this.setState(status[0]);
+		this.setState(status[9]);
 		const { setFieldValue, data: { refetch } } = this.props;
 		setFieldValue('atRisk', '');
 		setFieldValue('toWin', '');
@@ -81,12 +81,10 @@ class UserBetWager extends Component {
 	}
 	_handleBottomButton() {
 		if (this.state.done) {
-			this.props.navigation.popToTop();
-			this.props.navigation.navigate('UserHome');
+			this.props.navigation.dismiss();
 			return;
 		}
 		this._handleOrderSubmit();
-		return;
 	}
 	render() {
 		if (this.props.data.loading) return <Loading />;
@@ -108,10 +106,11 @@ class UserBetWager extends Component {
 						selected={params}
 						line={game.line}
 					/>
+					<SafeAreaView style={{ height: 12 }} />
 					<CardBetDetail game={game} selected={params} status={0} />
 				</ScrollView>
 				<BottomButton
-					disabled={loading}
+					disabled={loading || this.state.disabled}
 					text={this.state.text}
 					backgroundColor={this.state.backgroundColor}
 					onPress={() => this._handleBottomButton()}
