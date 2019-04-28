@@ -23,7 +23,7 @@ const GameText = ({ text, fontSize = 11, color = colors.white }) => (
 const Time = ({ matchTime, period }) => (
 	<SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'space-around' }}>
 		<GameText fontSize={16} text={moment(matchTime).tz('America/Los_Angeles').format('hh:mm A')} />
-		<GameText text={moment(matchTime).tz('America/Los_Angeles').format('ddd, MMM DD')} />
+		<GameText text={moment(matchTime).tz('America/Los_Angeles').format('ddd, MMM DD').toUpperCase()} />
 		<GameText text={periodConvert[period]} />
 	</SafeAreaView>
 );

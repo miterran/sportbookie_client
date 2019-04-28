@@ -25,19 +25,20 @@ const client = new ApolloClient({
 	}
 });
 
+const imageAssets = wallpapers
+	.concat(Object.values(logos))
+	.concat(sportsImg)
+	.map((image) => Asset.fromModule(image).downloadAsync());
+
 class App extends Component {
 	state = { isLoadingComplete: false };
-	_loadResourcesAsync = async () =>
-		Promise.all([ Asset.loadAsync(wallpapers.concat(Object.values(logos)).concat(sportsImg)) ]);
-	_handleLoadingError = (error) => console.warn(error);
-	_handleFinishLoading = () => this.setState({ isLoadingComplete: true });
 	render() {
 		if (!this.state.isLoadingComplete) {
 			return (
 				<AppLoading
-					startAsync={this._loadResourcesAsync}
-					onError={this._handleLoadingError}
-					onFinish={this._handleFinishLoading}
+					startAsync={async () => await Promise.all([ ...imageAssets ])}
+					onError={(error) => console.warn(error)}
+					onFinish={() => this.setState({ isLoadingComplete: true })}
 				/>
 			);
 		}

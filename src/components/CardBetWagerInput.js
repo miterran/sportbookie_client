@@ -35,19 +35,10 @@ const CardBetWagerInput = ({
 	onChangeToWin,
 	avaiableCredit,
 	editable = true,
-	selected: { lineType, oddType, pointsType, target },
+	selected: { lineType, oddType },
 	line
 }) => (
 	<Card>
-		<SafeAreaView style={{ flex: 1, flexDirection: 'row', margin: 12 }}>
-			<Text style={styles.title}>BET</Text>
-			<Text style={[ styles.input, { color: colors.special } ]}>{`${lineRename[
-				lineType
-			]} ${target.toUpperCase()} ${displayOdd(line[lineType][pointsType], lineType) || ''} (${displayOdd(
-				line[lineType][oddType]
-			)})`}</Text>
-		</SafeAreaView>
-
 		<SafeAreaView style={{ flex: 1, flexDirection: 'row', margin: 12 }}>
 			<Text style={styles.title}>CREDIT</Text>
 			<Text style={[ styles.input, { color: avaiableCredit >= 0 ? colors.primary : colors.danger } ]}>
@@ -68,6 +59,11 @@ const CardBetWagerInput = ({
 			onChangeValue={onChangeToWin}
 			editable={editable}
 		/>
+
+		<SafeAreaView style={{ flex: 1, flexDirection: 'row', margin: 12 }}>
+			<Text style={styles.title}>LINE</Text>
+			<Text style={[ styles.input, { color: colors.special } ]}>{displayOdd(line[lineType][oddType])}</Text>
+		</SafeAreaView>
 	</Card>
 );
 

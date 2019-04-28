@@ -94,6 +94,14 @@ class UserBetWager extends Component {
 			values: { atRisk, toWin },
 			data: { loading, game, userState: { available } }
 		} = this.props;
+		const selected = {
+			lineType: params.lineType,
+			pointsType: params.pointsType,
+			points: game.line[params.lineType][params.pointsType],
+			oddType: params.oddType,
+			odd: game.line[params.lineType][params.oddType],
+			target: params.target
+		};
 		return (
 			<Container>
 				<ScrollView refreshControl={<RefreshControl refreshing={loading} onRefresh={() => this._refetch()} />}>
@@ -108,7 +116,7 @@ class UserBetWager extends Component {
 						line={game.line}
 					/>
 					<SafeAreaView style={{ height: 12 }} />
-					<CardBetDetail game={game} selected={params} status={0} />
+					<CardBetDetail game={game} selected={selected} status={0} />
 				</ScrollView>
 				<BottomButton
 					disabled={loading || this.state.disabled}

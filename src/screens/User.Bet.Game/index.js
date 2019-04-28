@@ -45,7 +45,7 @@ class UserBetGame extends Component {
 				<BottomButton
 					disabled={!this.state.ID}
 					backgroundColor={this.state.ID ? colors.success : colors.dark}
-					text={this.state.ID ? 'NEXT' : 'SELECT ODD'}
+					text={this.state.ID ? 'NEXT' : 'SELECT LINE'}
 					onPress={() => this.props.navigation.navigate('UserBetWager', this.state)}
 				/>
 			</Container>
