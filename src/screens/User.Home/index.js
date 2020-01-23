@@ -49,6 +49,7 @@ class Home extends PureComponent {
 						keyExtractor={(bet) => bet.ID}
 						ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
 						ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
+						showsVerticalScrollIndicator={false}
 						renderItem={({ item: bet }) => (
 							<CardBetDetail
 								status={bet.status}

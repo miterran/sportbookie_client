@@ -22,6 +22,7 @@ class UserHistoryWeekSelect extends PureComponent {
 					keyExtractor={(history, i) => 'h' + i}
 					ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
 					ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
+					showsVerticalScrollIndicator={false}
 					renderItem={({ item: history }) => (
 						<CardHistoryWeekSelect
 							onPress={() => this.props.navigation.navigate('UserHistoryWeeklyDetail', history)}

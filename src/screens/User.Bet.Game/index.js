@@ -37,6 +37,7 @@ class UserBetGame extends Component {
 					keyExtractor={(game) => game.ID}
 					ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
 					ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
+					showsVerticalScrollIndicator={false}
 					extraData={this.state}
 					renderItem={({ item: game }) => (
 						<CardGame game={game} selectHandle={(select) => this.setState(select)} selected={this.state} />

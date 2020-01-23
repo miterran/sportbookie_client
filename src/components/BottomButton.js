@@ -14,7 +14,7 @@ const BottomButton = ({ onPress, text, backgroundColor = colors.dark, color = co
 
 const styles = StyleSheet.create({
 	button: {
-		height: 60,
+		height: 80,
 		width: '100%',
 		alignItems: 'center',
 		justifyContent: 'center'

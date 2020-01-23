@@ -27,6 +27,7 @@ class UserHistoryWeeklySummary extends PureComponent {
 					ListHeaderComponent={<SafeAreaView style={{ height: 12 }} />}
 					ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
 					ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
+					showsVerticalScrollIndicator={false}
 					renderItem={({ item: bet }) => (
 						<CardBetDetail
 							game={bet.game}

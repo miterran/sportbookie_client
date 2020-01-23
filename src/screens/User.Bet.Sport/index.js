@@ -30,6 +30,7 @@ class UserBetSport extends PureComponent {
 					extraData={() => null}
 					ListFooterComponent={<SafeAreaView style={{ height: 48 }} />}
 					ItemSeparatorComponent={() => <SafeAreaView style={{ height: 12 }} />}
+					showsVerticalScrollIndicator={false}
 					renderItem={({ item: sport }) => {
 						return (
 							<BetSportPick

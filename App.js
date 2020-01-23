@@ -4,16 +4,17 @@ import Nav from './src/navigators';
 import axios from 'axios';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import { AppLoading, Asset } from 'expo';
-
+import { AppLoading } from 'expo';
+import { Asset } from 'expo-asset'
 import wallpapers from './src/util/wallpapers';
 import logos from './src/util/logos';
 import sportsImg from './src/util/sportsImg';
-import { Constants } from 'expo';
-const URL = __DEV__
-	? `http://${Constants.manifest.hostUri.replace('19000', '8080')}`
-	: Constants.manifest.extra.serverUri;
-axios.defaults.baseURL = URL;
+import Constants from 'expo-constants'
+// const URL = __DEV__
+// 	? `http://${Constants.manifest.hostUri.replace('19000', '8080')}`
+// 	: Constants.manifest.extra.serverUri;
+// axios.defaults.baseURL = URL;
+const URL = "https://sportbookie.herokuapp.com";
 const client = new ApolloClient({
 	uri: URL + '/graphql',
 	request: async (operation) => {
